@@ -10,7 +10,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log('Welcome to the snek!')});
+    console.log('Welcome to the snek!')
+  conn.write('Name: XYZ')});
   
     return conn;
 };

@@ -11,8 +11,18 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log('Welcome to the snek!')
-  conn.write('Name: XYZ')});
-  
+
+});
+
+conn.write('Name: XYZ')
+// conn.write("Move: up")
+// conn.write("Move: right")
+// conn.write("Move: down")
+// conn.write("Move: left")
+
+  conn.on('data', (data) => {
+    console.log('Server says: ', data);
+  });
     return conn;
 };
 

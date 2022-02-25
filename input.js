@@ -11,6 +11,10 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = function (input) {
+  // your code here
+  if (input === "\u0003") {
+    process.exit();
+  }
   if (input === "w") {
     connection.write("Move: up");
   }
@@ -23,6 +27,7 @@ const handleUserInput = function (input) {
   if (input === "d") {
     connection.write("Move: right");
   }
+  connection.write("Say: Ekanssssses");
 };
 
 module.exports = setupInput;
